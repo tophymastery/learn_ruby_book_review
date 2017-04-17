@@ -431,3 +431,465 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 4616ms (Views: 4604.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/books/new" for ::1 at 2017-04-17 23:04:09 +0700
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 58ms (Views: 48.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/books/new" for ::1 at 2017-04-17 23:06:59 +0700
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial books/__form, application/__form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/akadet/project/Programing/ruby/learn_ruby_book_review/app/views"
+):
+    1: <h1>New book</h1>
+    2: 
+    3: <%= render '_form' %>
+  
+app/views/books/new.html.erb:3:in `_app_views_books_new_html_erb__3247736175491100604_70158003913180'
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.8ms)
+Started GET "/books/new" for ::1 at 2017-04-17 23:07:06 +0700
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (215.1ms)
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x007f9ddc599800>:0x007f9ddfbed140>
+Did you mean?  format
+               formats
+               formats=
+               form_for
+               form_tag
+               fork):
+    1: <h1>New book</h1>
+    2: 
+    3: <%= render form %>
+  
+app/views/books/new.html.erb:3:in `_app_views_books_new_html_erb__3247736175491100604_70158020210160'
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.5ms)
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (87.6ms)
+Started GET "/books/new" for ::1 at 2017-04-17 23:07:33 +0700
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (108.6ms)
+  Rendered books/new.html.erb within layouts/application (111.0ms)
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `input' for #<ActionView::Helpers::FormBuilder:0x007f9dddc0b318>):
+    1: <%= form_for @book do |f| %>
+    2:   <%= f.input :title, label: "Book Title" %>
+    3:   <%= f.input :description %>
+    4:   <%= f.input :author %>
+    5:   <%= f.button :submit %>
+  
+app/views/books/_form.html.erb:2:in `block in _app_views_books__form_html_erb__1228692163584571522_70158003390020'
+app/views/books/_form.html.erb:1:in `_app_views_books__form_html_erb__1228692163584571522_70158003390020'
+app/views/books/new.html.erb:3:in `_app_views_books_new_html_erb__3247736175491100604_70157992418280'
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.4ms)
+Started GET "/books/new" for ::1 at 2017-04-17 23:08:14 +0700
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (59.6ms)
+  Rendered books/new.html.erb within layouts/application (62.1ms)
+Completed 200 OK in 119ms (Views: 117.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for ::1 at 2017-04-17 23:08:34 +0700
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2pPK6dn/N729VChHIDloMLENQ8n5MFpTEpYFnTOS+tACyImcxb2vO0Viqw39t8wMYzq1Lgi2lVRevuDj8PJH+Q==", "book"=>{"title"=>"", "description"=>"", "author"=>""}, "commit"=>"Create Book"}
+No template found for BooksController#create, rendering head :no_content
+Completed 204 No Content in 58ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2017-04-17 23:08:37 +0700
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (7.6ms)
+  Rendered books/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2017-04-17 23:09:57 +0700
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (6.1ms)
+  Rendered books/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 79ms (Views: 66.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/books" for ::1 at 2017-04-17 23:10:03 +0700
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wy4zs+z0p6ObaqQBYFKAcArOEKaa2kkoVIfzN4aWO/WDdXDG8LY/JWNcJ0u93CRM2PnmQWtchi8YrxZJRfaG3A==", "book"=>{"title"=>"1", "description"=>"2", "author"=>"3"}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "description", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "1"], ["description", "2"], ["author", "3"], ["created_at", 2017-04-17 16:10:03 UTC], ["updated_at", 2017-04-17 16:10:03 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2017-04-17 23:10:03 +0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/new" for ::1 at 2017-04-17 23:10:20 +0700
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (8.7ms)
+  Rendered books/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for ::1 at 2017-04-17 23:12:36 +0700
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q5F2hzNSZFpYANgomA5bNxMZgpEwvg3Xc+pTGLBUMF2byjXyLxD83KA2W2JFgP8LwS50dsE4wtA/wrZmczSNdA==", "book"=>{"title"=>"Persona 5 - Standard Edition - PlayStation 4", "description"=>"Persona 5 marks the return of the award-winning franchise on home consoles since the PS2 generation\r\nFast-paced Japanese role-playing game mechanics, exciting action sequences\r\nVibrantly stylized characters, enemies, and environments, elegant anime-style cut-scenes\r\nSoundtrack featuring the fresh sounds of acid jazz composed by the gifted Shoji Meguro\r\nOvercome various obstacles with graceful Phantom Thief action. The simple-to-learn, but hard-to-master controls will be enjoyed by newcomers and veteran Persona players alike.", "author"=>"Atlus"}, "commit"=>"Create Book"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "books" ("title", "description", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Persona 5 - Standard Edition - PlayStation 4"], ["description", "Persona 5 marks the return of the award-winning franchise on home consoles since the PS2 generation\r\nFast-paced Japanese role-playing game mechanics, exciting action sequences\r\nVibrantly stylized characters, enemies, and environments, elegant anime-style cut-scenes\r\nSoundtrack featuring the fresh sounds of acid jazz composed by the gifted Shoji Meguro\r\nOvercome various obstacles with graceful Phantom Thief action. The simple-to-learn, but hard-to-master controls will be enjoyed by newcomers and veteran Persona players alike."], ["author", "Atlus"], ["created_at", 2017-04-17 16:12:36 UTC], ["updated_at", 2017-04-17 16:12:36 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2017-04-17 23:12:36 +0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 87ms (Views: 84.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mBook Load (2.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Started GET "/" for ::1 at 2017-04-17 23:13:39 +0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  Rendered books/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 60ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-17 23:15:08 +0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  Rendered books/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 76ms (Views: 70.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/new" for ::1 at 2017-04-17 23:15:53 +0700
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (8.2ms)
+  Rendered books/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 77ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for ::1 at 2017-04-17 23:16:15 +0700
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sN4WVWs5oDl9pwqRj4I+KkRt+SXoww7okrYInjj0/LZohVUgd3s4v4WRidtSDJoWlloPwhlFwe/enu3g+5RBnw==", "book"=>{"title"=>"Horizon Zero Dawn - PlayStation 4", "description"=>"A Lush Post-Apocalyptic World – How have machines dominated this world, and what is their purpose? What happened to the civilization here before? Scour every corner of a realm filled with ancient relics and mysterious buildings in order to uncover your past and unearth the many secrets of a forgotten land.\r\nNature and Machines Collide – Horizon Zero Dawn juxtaposes two contrasting elements, taking a vibrant world rich with beautiful nature and filling it with awe-inspiring highly advanced technology. This marriage creates a dynamic combination for both exploration and gameplay.\r\nDefy Overwhelming Odds – The foundation of combat in Horizon Zero Dawn is built upon the speed and cunning of Aloy versus the raw strength and size of the machines. In order to overcome a much larger and technologically superior enemy, Aloy must use every ounce of her knowledge, intelligence, and agility to survive each encounter.\r\nCutting Edge Open World Tech – Stunningly detailed forests, imposing mountains, and atmospheric ruins of a bygone civilization meld together in a landscape that is alive with changing weather systems and a full day/night cycle.", "author"=>"Sony"}, "commit"=>"Create Book"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "description", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Horizon Zero Dawn - PlayStation 4"], ["description", "A Lush Post-Apocalyptic World – How have machines dominated this world, and what is their purpose? What happened to the civilization here before? Scour every corner of a realm filled with ancient relics and mysterious buildings in order to uncover your past and unearth the many secrets of a forgotten land.\r\nNature and Machines Collide – Horizon Zero Dawn juxtaposes two contrasting elements, taking a vibrant world rich with beautiful nature and filling it with awe-inspiring highly advanced technology. This marriage creates a dynamic combination for both exploration and gameplay.\r\nDefy Overwhelming Odds – The foundation of combat in Horizon Zero Dawn is built upon the speed and cunning of Aloy versus the raw strength and size of the machines. In order to overcome a much larger and technologically superior enemy, Aloy must use every ounce of her knowledge, intelligence, and agility to survive each encounter.\r\nCutting Edge Open World Tech – Stunningly detailed forests, imposing mountains, and atmospheric ruins of a bygone civilization meld together in a landscape that is alive with changing weather systems and a full day/night cycle."], ["author", "Sony"], ["created_at", 2017-04-17 16:16:15 UTC], ["updated_at", 2017-04-17 16:16:15 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2017-04-17 23:16:15 +0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  Rendered books/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 62ms (Views: 57.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ?[0m  [["id", 1]]
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? ORDER BY "books"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "books" SET "title" = ?, "description" = ?, "author" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["title", "Nioh - PlayStation 4"], ["description", "Master every fighting style – learn the flow of combat and move with precision. Unleash combinations of attacks and dodges specific to a range of authentic samurai weapons, including polearms, katanas and axes.\nExplore a fantastical and dark vision of 16th century Japan – fight alongside and against legendary heroes and villains of the Sengoku period.\nFace brutal and grotesque enemies – standalone against skilled samurai, vile beasts, and demons known as the yokai."], ["author", "sony"], ["updated_at", 2017-04-17 16:18:44 UTC], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+Started GET "/" for ::1 at 2017-04-17 23:19:07 +0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 80ms (Views: 76.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-04-17 23:20:50 +0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 68ms (Views: 65.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/new" for ::1 at 2017-04-17 23:20:51 +0700
+Processing by BooksController#new as HTML
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/_form.html.erb (19.1ms)
+  Rendered books/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 138ms (Views: 125.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/book/1" for ::1 at 2017-04-17 23:25:04 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/book/1"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [9 times] (11.5ms)
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.9ms)
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (116.7ms)
+Started GET "/books/1" for ::1 at 2017-04-17 23:25:09 +0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <h2><%= @bbok.title %></h2>
+    2: <h3><%= @book.author %></h3>
+    3: <p><%= @book.description %></p>
+  
+app/views/books/show.html.erb:1:in `_app_views_books_show_html_erb__1503315882568268204_70157956971180'
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.8ms)
+Started GET "/books/1" for ::1 at 2017-04-17 23:25:28 +0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 68ms (Views: 62.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-04-17 23:25:44 +0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  Rendered books/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 65ms (Views: 61.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-04-17 23:26:28 +0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 63ms (Views: 61.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/3" for ::1 at 2017-04-17 23:26:29 +0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 109ms (Views: 100.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/2" for ::1 at 2017-04-17 23:26:31 +0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 87ms (Views: 80.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1" for ::1 at 2017-04-17 23:26:33 +0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 79ms (Views: 70.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/1/edit" for ::1 at 2017-04-17 23:29:37 +0700
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (7.5ms)
+  Rendered books/edit.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 77ms (Views: 65.3ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/books/1" for ::1 at 2017-04-17 23:30:02 +0700
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cKsaQtc7uUPVeQSUyqUtCuAe3oEjnIw3r/OWWoOtwOmo8Fk3y3khxS1Ph94XK4k2MikoZtIaQzDj23MkQM19wA==", "book"=>{"title"=>"Nioh - PlayStation 4.", "description"=>"Master every fighting style – learn the flow of combat and move with precision. Unleash combinations of attacks and dodges specific to a range of authentic samurai weapons, including polearms, katanas and axes.\r\nExplore a fantastical and dark vision of 16th century Japan – fight alongside and against legendary heroes and villains of the Sengoku period.\r\nFace brutal and grotesque enemies – standalone against skilled samurai, vile beasts, and demons known as the yokai.", "author"=>"sony"}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "books" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["title", "Nioh - PlayStation 4."], ["description", "Master every fighting style – learn the flow of combat and move with precision. Unleash combinations of attacks and dodges specific to a range of authentic samurai weapons, including polearms, katanas and axes.\r\nExplore a fantastical and dark vision of 16th century Japan – fight alongside and against legendary heroes and villains of the Sengoku period.\r\nFace brutal and grotesque enemies – standalone against skilled samurai, vile beasts, and demons known as the yokai."], ["updated_at", 2017-04-17 16:30:02 UTC], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 10ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books/1" for ::1 at 2017-04-17 23:30:02 +0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 69ms (Views: 62.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1" for ::1 at 2017-04-17 23:31:36 +0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 64ms (Views: 61.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/books/1" for ::1 at 2017-04-17 23:32:22 +0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 59ms (Views: 54.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/1/edit" for ::1 at 2017-04-17 23:32:26 +0700
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (11.4ms)
+  Rendered books/edit.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 78ms (Views: 70.9ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/books/1" for ::1 at 2017-04-17 23:32:31 +0700
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xb9XvmSMVSlV/EeDF1GvlXxUr+HuhjJ/GfhYuxA/R31k3oAcGi8yCZXiGSvjSdh9O8x1VzLpPElOsncNizs2Kg==", "book"=>{"title"=>"Nioh - PlayStation 4", "description"=>"Master every fighting style – learn the flow of combat and move with precision. Unleash combinations of attacks and dodges specific to a range of authentic samurai weapons, including polearms, katanas and axes.\r\nExplore a fantastical and dark vision of 16th century Japan – fight alongside and against legendary heroes and villains of the Sengoku period.\r\nFace brutal and grotesque enemies – standalone against skilled samurai, vile beasts, and demons known as the yokai.", "author"=>"sony"}, "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "books" SET "title" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["title", "Nioh - PlayStation 4"], ["updated_at", 2017-04-17 16:32:31 UTC], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 13ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/books/1" for ::1 at 2017-04-17 23:32:31 +0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 63ms (Views: 59.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/books/1" for ::1 at 2017-04-17 23:33:17 +0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 64ms (Views: 53.9ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/books/1" for ::1 at 2017-04-17 23:33:24 +0700
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6Y5ytJr2E8Mx0ClmU/0SauPYTH/ILfYTFfc67D5Z6wUx1THBhrSLRcnmqiyOc7ZWMe+6mDmrORRZ39+S/TlWLA==", "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2017-04-17 23:33:24 +0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  Rendered books/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.1ms)
+
+

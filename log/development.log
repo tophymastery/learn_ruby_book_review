@@ -3263,3 +3263,104 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 70ms (Views: 64.7ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/books?category=Action-adventure" for ::1 at 2017-04-22 16:13:27 +0700
+Processing by BooksController#index as HTML
+  Parameters: {"category"=>"Action-adventure"}
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Action-adventure"], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."category_id" = ? ORDER BY created_at DESC[0m  [["category_id", 1]]
+  Rendered books/index.html.erb within layouts/application (9.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name ASC[0m
+Completed 200 OK in 150ms (Views: 126.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/books?category=Action-adventure" for ::1 at 2017-04-22 16:15:26 +0700
+Processing by BooksController#index as HTML
+  Parameters: {"category"=>"Action-adventure"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Action-adventure"], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "books" WHERE "books"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."category_id" = ? ORDER BY created_at DESC[0m  [["category_id", 1]]
+  Rendered books/index.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name ASC[0m
+Completed 200 OK in 82ms (Views: 74.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/books?category=Action+role-playing" for ::1 at 2017-04-22 16:15:29 +0700
+Processing by BooksController#index as HTML
+  Parameters: {"category"=>"Action role-playing"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Action role-playing"], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "books" WHERE "books"."category_id" = ?[0m  [["category_id", 2]]
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."category_id" = ? ORDER BY created_at DESC[0m  [["category_id", 2]]
+  Rendered books/index.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name ASC[0m
+Completed 200 OK in 103ms (Views: 94.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/books?category=Action-adventure" for ::1 at 2017-04-22 16:15:32 +0700
+Processing by BooksController#index as HTML
+  Parameters: {"category"=>"Action-adventure"}
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Action-adventure"], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "books" WHERE "books"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."category_id" = ? ORDER BY created_at DESC[0m  [["category_id", 1]]
+  Rendered books/index.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name ASC[0m
+Completed 200 OK in 103ms (Views: 96.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/books?category=RPG" for ::1 at 2017-04-22 16:15:34 +0700
+Processing by BooksController#index as HTML
+  Parameters: {"category"=>"RPG"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "RPG"], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "books" WHERE "books"."category_id" = ?[0m  [["category_id", 5]]
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."category_id" = ? ORDER BY created_at DESC[0m  [["category_id", 5]]
+  Rendered books/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name ASC[0m
+Completed 200 OK in 90ms (Views: 84.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/books?category=RPG" for ::1 at 2017-04-22 16:16:05 +0700
+Processing by BooksController#index as HTML
+  Parameters: {"category"=>"RPG"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "RPG"], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "books" WHERE "books"."category_id" = ?[0m  [["category_id", 5]]
+  Rendered books/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name ASC[0m
+Completed 200 OK in 102ms (Views: 95.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books?category=Action+role-playing" for ::1 at 2017-04-22 16:16:06 +0700
+Processing by BooksController#index as HTML
+  Parameters: {"category"=>"Action role-playing"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Action role-playing"], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "books" WHERE "books"."category_id" = ?[0m  [["category_id", 2]]
+  Rendered books/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name ASC[0m
+Completed 200 OK in 113ms (Views: 107.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/books?category=Action-adventure" for ::1 at 2017-04-22 16:16:09 +0700
+Processing by BooksController#index as HTML
+  Parameters: {"category"=>"Action-adventure"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Action-adventure"], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "books" WHERE "books"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."category_id" = ? ORDER BY created_at DESC[0m  [["category_id", 1]]
+  Rendered books/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (3.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name ASC[0m
+Completed 200 OK in 135ms (Views: 121.2ms | ActiveRecord: 4.2ms)
+
+

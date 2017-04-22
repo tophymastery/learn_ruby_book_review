@@ -3364,3 +3364,28 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 135ms (Views: 121.2ms | ActiveRecord: 4.2ms)
 
 
+Started GET "/books?category=Action-adventure" for ::1 at 2017-04-22 16:19:07 +0700
+Processing by BooksController#index as HTML
+  Parameters: {"category"=>"Action-adventure"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Action-adventure"], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "books" WHERE "books"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."category_id" = ? ORDER BY created_at DESC[0m  [["category_id", 1]]
+  Rendered books/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name ASC[0m
+Completed 200 OK in 77ms (Views: 71.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books?category=Action+role-playing" for ::1 at 2017-04-22 16:19:10 +0700
+Processing by BooksController#index as HTML
+  Parameters: {"category"=>"Action role-playing"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = ? LIMIT ?[0m  [["name", "Action role-playing"], ["LIMIT", 1]]
+  Rendering books/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "books" WHERE "books"."category_id" = ?[0m  [["category_id", 2]]
+  Rendered books/index.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name ASC[0m
+Completed 200 OK in 96ms (Views: 88.8ms | ActiveRecord: 1.2ms)
+
+

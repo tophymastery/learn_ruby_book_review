@@ -7113,3 +7113,37 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 113ms (Views: 102.0ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/books/1/edit" for ::1 at 2017-04-23 13:20:05 +0700
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 50ms (ActiveRecord: 2.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book with 'id'=1):
+  
+app/controllers/books_controller.rb:63:in `find_book'
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/akadet/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.1ms)
+Started GET "/books/1/edit" for ::1 at 2017-04-23 13:20:26 +0700
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-23 13:20:26 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY name ASC[0m
+Completed 200 OK in 88ms (Views: 77.6ms | ActiveRecord: 1.5ms)
+
+
